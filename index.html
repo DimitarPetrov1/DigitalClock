@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Parcel Sandbox</title>
+    <title>Digital clock</title>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="./src/styles.css" />
   </head>
@@ -26,13 +26,17 @@
       </div>
     </div>
     <div class="controls">
-      <p>Clock color:&nbsp;</p>
-      <label id="labelColorPicker" for="colorPicker"></label>
-      <input type="color" id="colorPicker" />
-      <label for="sizePicker">Clock size:</label>
-      <input type="range" id="sizePicker" min="20" />
-      <div class="shadow-options">
-        <label for="toggleShadow">Shadow:</label>
+      <div class="option">
+        <p>Clock color:&nbsp;</p>
+        <p id="labelColorPicker"></p>
+        <input type="color" id="colorPicker" />
+      </div>
+      <div class="option">
+        <p>Clock size:&nbsp;</p>
+        <input type="range" id="sizePicker" min="20" />
+      </div>
+      <div class="option">
+        <p>Shadow:&nbsp;</p>
         <input type="checkbox" id="toggleShadow" />
       </div>
     </div>

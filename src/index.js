@@ -18,7 +18,6 @@ const handleColor = () => {
   clock.forEach((clock) => {
     clock.style.color = currentColor;
   });
-
   labelColorPicker.style.background = currentColor;
 };
 
@@ -33,7 +32,16 @@ const handleSize = () => {
 };
 
 const handleShadow = () => {
-  //
+  if (
+    localStorage.getItem("shadowOn") === "true" ||
+    localStorage.getItem("shadowOn") === null
+  ) {
+    toggleShadow.checked = true;
+    shadow.style.visibility = "visible";
+  } else {
+    toggleShadow.checked = false;
+    shadow.style.visibility = "hidden";
+  }
 };
 
 handleColor();
@@ -76,4 +84,7 @@ sizePicker.addEventListener("change", (e) => {
   localStorage.setItem("size", e.target.value);
 });
 
-toggleShadow.addEventListener("click", () => {});
+toggleShadow.addEventListener("click", () => {
+  localStorage.setItem("shadowOn", toggleShadow.checked);
+  handleShadow();
+});
