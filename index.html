@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./src/styles.css" />
+  </head>
+
+  <body>
+    <div id="app">
+      <div class="clock-body">
+        <div class="clock">
+          <span class="hour"></span>
+          <span class="separator">:</span>
+          <span class="minutes"></span>
+          <span class="separator">:</span>
+          <span class="seconds"></span>
+        </div>
+        <div class="clock clock-shadow">
+          <span class="hour"></span>
+          <span class="separator">:</span>
+          <span class="minutes"></span>
+          <span class="separator">:</span>
+          <span class="seconds"></span>
+        </div>
+      </div>
+    </div>
+    <div class="controls">
+      <p>Clock color:&nbsp;</p>
+      <label id="labelColorPicker" for="colorPicker"></label>
+      <input type="color" id="colorPicker" />
+      <label for="sizePicker">Clock size:</label>
+      <input type="range" id="sizePicker" min="20" />
+      <div class="shadow-options">
+        <label for="toggleShadow">Shadow:</label>
+        <input type="checkbox" id="toggleShadow" />
+      </div>
+    </div>
+    <script defer src="src/index.js"></script>
+  </body>
+</html>

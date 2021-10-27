@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap");
+@font-face {
+  font-family: "digital";
+  src: url("../assets/digital-7.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "digital", "Orbitron", "serif";
+  font-weight: 400;
+
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.clock-body {
+  user-select: none;
+}
+.clock {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-basis: row;
+}
+
+.clock-shadow {
+  transform: rotateX(180deg) skewX(-40deg);
+  transform-origin: bottom;
+  opacity: 0.2;
+  margin-left: 5%;
+}
+.clock-shadow:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: -5%;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0) 20%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+}
+
+/*  controls */
+.controls {
+  user-select: none;
+  position: absolute;
+  bottom: 0;
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+#colorPicker {
+  opacity: 0;
+  pointer-events: none;
+}
+
+#labelColorPicker {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+.shadow-options {
+  /*  */
+}
+
+/* bg-clock */
+
+.hour,
+.minutes,
+.seconds {
+  position: relative;
+}
+.hour:before,
+.minutes:before,
+.seconds:before {
+  position: absolute;
+  content: "00";
+  top: 0;
+  right: 0;
+  opacity: 0.1;
+}
+
+.clock-shadow .hour:before,
+.clock-shadow .minutes:before,
+.clock-shadow .seconds:before {
+  content: "";
+}
